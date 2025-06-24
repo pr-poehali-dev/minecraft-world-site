@@ -5,7 +5,7 @@ const ProductGrid = () => {
     {
       emoji: "⚔️",
       name: "Премиальный меч",
-      price: 1500,
+      price: 600,
       rarity: "legendary" as const,
       description:
         "Эксклюзивное оружие с уникальными характеристиками и стильным дизайном",
