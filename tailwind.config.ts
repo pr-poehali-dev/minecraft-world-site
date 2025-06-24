@@ -52,29 +52,23 @@ export default {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
-        minecraft: {
-          green: "#2D5016",
-          brown: "#8B4513",
-          stone: "#7F7F7F",
-          gold: "#FFAA00",
-          diamond: "#5DADE2",
-          netherite: "#654321",
-        },
       },
       fontFamily: {
-        minecraft: ['"Press Start 2P"', "monospace"],
+        sans: ["Inter", "system-ui", "sans-serif"],
       },
       borderRadius: {
-        none: "0px",
+        lg: "var(--radius)",
+        md: "calc(var(--radius) - 2px)",
+        sm: "calc(var(--radius) - 4px)",
       },
       keyframes: {
-        "minecraft-bounce": {
-          "0%, 100%": { transform: "translateY(0px)" },
-          "50%": { transform: "translateY(-4px)" },
+        "fade-in": {
+          "0%": { opacity: "0", transform: "translateY(20px)" },
+          "100%": { opacity: "1", transform: "translateY(0)" },
         },
       },
       animation: {
-        "minecraft-bounce": "minecraft-bounce 0.6s ease-in-out infinite",
+        "fade-in": "fade-in 0.6s ease-out",
       },
     },
   },
