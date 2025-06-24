@@ -33,21 +33,53 @@
   }
 
   body {
-    @apply bg-gradient-to-br from-slate-50 to-blue-50 text-slate-900 font-sans;
+    @apply bg-gradient-to-br from-indigo-50 via-white to-purple-50 text-slate-900 font-sans;
     min-height: 100vh;
   }
 }
 
 @layer components {
   .modern-button {
-    @apply bg-gradient-to-r from-indigo-500 to-purple-600 hover:from-indigo-600 hover:to-purple-700 text-white font-semibold px-6 py-3 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105;
+    @apply bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 hover:from-indigo-600 hover:via-purple-600 hover:to-pink-600 text-white font-bold px-8 py-4 rounded-2xl shadow-2xl hover:shadow-3xl transition-all duration-500 transform hover:scale-110 hover:-translate-y-1;
   }
 
   .modern-card {
-    @apply bg-white/80 backdrop-blur-sm border border-white/20 shadow-lg hover:shadow-xl transition-all duration-300 rounded-2xl p-6;
+    @apply bg-white/90 backdrop-blur-lg border border-white/30 shadow-2xl hover:shadow-3xl transition-all duration-500 rounded-3xl p-8 hover:bg-white/95 hover:scale-105;
   }
 
   .modern-nav {
-    @apply bg-white/90 backdrop-blur-md border-b border-white/20 shadow-sm;
+    @apply bg-white/95 backdrop-blur-xl border-b border-white/30 shadow-lg;
+  }
+
+  .glow-text {
+    @apply bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 bg-clip-text text-transparent;
+    text-shadow: 0 0 30px rgba(139, 92, 246, 0.3);
+  }
+
+  .floating-animation {
+    animation: float 6s ease-in-out infinite;
+  }
+
+  @keyframes float {
+    0%,
+    100% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+
+  .pulse-glow {
+    animation: pulse-glow 2s ease-in-out infinite alternate;
+  }
+
+  @keyframes pulse-glow {
+    from {
+      box-shadow: 0 0 20px rgba(139, 92, 246, 0.3);
+    }
+    to {
+      box-shadow: 0 0 40px rgba(139, 92, 246, 0.6);
+    }
   }
 }

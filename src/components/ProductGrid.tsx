@@ -50,16 +50,17 @@ const ProductGrid = () => {
   ];
 
   return (
-    <section className="mb-16">
-      <div className="text-center mb-12">
-        <h2 className="text-4xl font-bold mb-4 bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">
+    <section className="mb-20">
+      <div className="text-center mb-16">
+        <h2 className="text-5xl font-black mb-6 glow-text floating-animation">
           🔥 Популярные товары
         </h2>
-        <p className="text-slate-600 text-lg">
-          Откройте для себя самые востребованные предметы нашей коллекции
+        <p className="text-slate-700 text-xl font-medium max-w-2xl mx-auto">
+          Откройте для себя самые востребованные предметы нашей эксклюзивной
+          коллекции
         </p>
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-10">
         {products.map((product, index) => (
           <ProductCard key={index} {...product} />
         ))}
