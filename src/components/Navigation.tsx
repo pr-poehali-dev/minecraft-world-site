@@ -7,7 +7,7 @@ const Navigation = () => {
     <nav className="modern-nav sticky top-0 z-50 px-6 py-4">
       <div className="container mx-auto flex justify-between items-center">
         <div className="text-2xl font-bold bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">
-          🚀 Modern Shop
+          CountryVanila Shop
         </div>
         <div className="flex gap-3">
           <Link
